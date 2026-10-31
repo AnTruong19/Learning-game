@@ -282,6 +282,25 @@ button.brand:hover span { text-decoration: underline; text-underline-offset: 4px
 @media (max-width: 520px) { .buddy { grid-template-columns: 110px 1fr; } }
 @media (max-width: 340px) { .brand span { display: none; } }
 @media (max-width: 400px) { .brand .acad { display: none; } }
+@media (min-width: 900px) {
+  .ob { display: grid; grid-template-columns: 1fr 1.25fr; gap: 18px 32px; align-items: start; }
+  .ob > :first-child, .ob > :last-child { grid-column: 1 / -1; }
+  .obcol { gap: 16px; }
+}
+@media (min-width: 641px) {
+  .room3d { aspect-ratio: auto; height: clamp(300px, calc(100vh - 240px), 600px); }
+}
+@media (min-width: 641px) and (max-height: 860px) {
+  body { padding-block: 10px 28px; }
+  #app { gap: 12px; }
+  .tab { padding: 7px 10px; }
+  h1 { font-size: 1.6rem; }
+  .card { padding: 16px 18px; }
+  .qtext { font-size: 1.25rem; }
+  .key { padding: 7px 0; }
+  .choice { padding: 10px 12px; }
+  .detail > .stage { max-width: 200px; }
+}
 </style>
 <div id="app"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
